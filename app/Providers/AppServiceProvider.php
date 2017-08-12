@@ -3,12 +3,15 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+// Import Schema for the migration error
+use Illuminate\Support\Facades\Schema;
 // Import View
 use View;
 // Import Carbon for dates
 use Carbon\Carbon;
 // Import Auth
 use Auth;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         // share('key', 'value')
         View::share('myname', 'manu');
         // Access the attribute age from the function createFromDate using carbon

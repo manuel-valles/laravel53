@@ -19,4 +19,22 @@ class PagesController extends Controller
     	else
  		   	return 'No view avaliable';
     }
+
+    public function profile()
+    {
+        return view('pages.profile');
+    }
+
+    public function settings()
+    {
+        return view('pages.settings');
+    }
+
+    public function blade()
+    {
+        $gender = 'female';
+        $text = 'Hello there';
+        return view('blade.bladetest', compact('gender', 'text'));
+    }
+
 }
