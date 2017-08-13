@@ -25,7 +25,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware'=>['authenticated', 'anothermiddleware']], function(){
+Route::group(['middleware'=>'authenticated'], function(){
 	Route::get('profile','PagesController@profile');
 	Route::get('settings','PagesController@settings');
 	Route::get('users','UsersController@index');

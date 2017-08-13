@@ -8,6 +8,16 @@
                 <div class="panel-heading">Profile</div>
 
                 <div class="panel-body">
+                {{-- CUSTOM DIRECTIVES @ AppServiceProvider.php --}}
+                    <p>@sayHello('Manu')</p>
+                    <p>
+                        Your age is
+                        @age([1983,9,1])
+                    </p>
+                    <p>
+                        Your age is
+                        {{Carbon\Carbon::createFromDate(1983,9,1)->age}}
+                    </p>
                     <p>{{$married}}</p>
                     <p>{{$test}}</p>
                     <p>{{$age}}</p>
